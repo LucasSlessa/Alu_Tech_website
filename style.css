@@ -46,6 +46,8 @@ html, body {
     width: 100vw;
     background-color: #000000;
 }
+
+
 #page2 {
     position: relative;
     height: 100vh;
@@ -345,8 +347,9 @@ nav ul li a:hover::after {
 }
 
 .btn{
-    display: block;
+    display: inline-flex;
     margin: 50px auto;
+    margin-right: 600px;
     width: fit-content;
     border: 1px solid #ffffff;
     padding: 14px 50px;
@@ -399,7 +402,7 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 .btn.btn2{
-    display: inline-block;
+    display: inline;
     background: #000000;
 }
 .btn.btn.btn2:hover{
@@ -539,4 +542,157 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+
+    @media only screen and (max-width: 600px) {
+        /* Esconder o ícone de menu e mostrar o menu ao clicar */
+        nav .fa-solid {
+            display: block;
+            font-size: 25px;
+            color: #fff;
+        }
+        nav ul {
+            background-color: #0000003d;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+            transition: right 0.5s;
+            text-align: center;
+        }
+        nav ul li {
+            display: block;
+            margin: 25px;
+        }
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ffffff;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover {
+            background-color: #ff004f;
+        }
+        nav ul .fa-solid {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+        }
+        .sub-title {
+            font-size: 40px;
+        }
+        /* Adicione mais regras de mídia aqui conforme necessário */
+        canvas {
+            position: relative;
+            max-width: 100vw;
+            max-height: 100vh;
+            z-index: 0;
+        }
+
+
+        #page1 {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #000000;
+        }
+        
+        
+        #page2 {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #00000000;
+        }
+        #page3 {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #000000;
+        }
+        #page > h3 {
+            position: absolute;
+           
+            top: 55%;
+            font-family: gilroy;
+            font-weight: 400;
+            color: #7c7c7c;
+            left: 5%;
+        }
+        #page > h4 {
+            position: absolute;
+            top: 62%;
+            left: 25%;
+            font-family: gilroy;
+            font-weight: 500;
+        }
+        #page1 > #right-text {
+            position: absolute;
+            flex-wrap: wrap;
+            top: 30%;
+            left: 10%;
+        }
+        #page1 > #right-text > h3 {
+            font-weight: 400;
+            color: #7c7c7c;
+        }
+        #page1 > #right-text > h1 {
+            line-height: 1.5;
+            font-size: 50px;
+        }
+        #page1 > #left-text {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            text-align: end;
+            
+        }
+        
+        #page2 > #text1 {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+        #page2 > #text1 > h3 {
+            color: #7c7c7c;
+            font-weight: 400;
+        }
+        #page2 > #text1 > h1 {
+            font-size: 40px;
+            line-height: 1.5;
+        }
+        #page2 > #text2 {
+            position: relative;
+            top: 55%;
+            right: 2%;
+            text-align: end;
+        }
+        #page2 > #text2 > p {
+            color: #7c7c7c;
+            font-weight: 400;
+        }
+        #page3 > #text3 {
+            position: relative;
+            top: 40%;
+            right: 15%;
+            text-align: end;
+        }
+        #page3 > #text3 > h3 {
+            color: #7c7c7c;
+            font-weight: 400;
+        }
+        #page3 > #text3 > h1 {
+            font-size: 50px;
+        }
+    }
+    
+    
 }   
