@@ -17,10 +17,10 @@
 #preloader{
     background: #000000 url(liquid_teq64i.gif) no-repeat center center ;
     background-size: 20%;
-    height: 10vh;
-    width: 100vh;
+    height: 100vh;
+    width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
