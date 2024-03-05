@@ -386,10 +386,10 @@ gsap.to(imageSeq, {
   snap: "frame",
   ease: `none`,
   scrollTrigger: {
-    scrub: 0.15,
+    scrub: 0.5,
     trigger: `#page>canvas`,
     start: `top top`,
-    end: `600% top`,
+    end: `510% top`,
     scroller: `#main`,
   },
   onUpdate: render,
