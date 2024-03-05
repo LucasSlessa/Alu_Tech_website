@@ -14,6 +14,17 @@
     }
 }
 
+#preloader{
+    background: #000000 url(liquid_teq64i.gif) no-repeat center center ;
+    background-size: 20%;
+    height: 10vh;
+    width: 100vh;
+    position: fixed;
+    z-index: 100;
+}
+
+
+
 * {
     margin: 0%;
     padding: 0%;
@@ -29,6 +40,9 @@ html, body {
     width: 100%;
     background:#000000;
 }
+
+
+
 #main {
     position: absolute;
     overflow: hidden;
@@ -454,6 +468,7 @@ form .btn2{
     margin-top: -40px;
     display: block;
 }
+
 
 
 /* ------------------------css for small screen-------------------- */
