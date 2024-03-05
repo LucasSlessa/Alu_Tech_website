@@ -476,7 +476,7 @@ form .btn2{
 .slider{
     height: 100vh;
     width: 100vw;
-    margin-top: -114px;
+    margin-top: 0;
     position: relative;
     z-index: 10;
 }
@@ -500,7 +500,7 @@ form .btn2{
     left: 0;
     bottom: 0;
     background-image: linear-gradient(
-        to top, #000 40%,
+        to top, #000000 10%, transparent
     );
 }
 .slider .list .item .content{
