@@ -762,12 +762,13 @@ nav .fa-solid{
         }
         /* Adicione mais regras de mídia aqui conforme necessário */
         canvas {
+            
             position: static;
             top: 15%;
             width: 100vh;
             height: 100vh;
             
-            padding:  90px 80px;
+            
             
             z-index: 0;
         }
@@ -815,18 +816,14 @@ nav .fa-solid{
             animation-iteration-count: infinite;
         }
         #loop > h1 > span {
+            
             -webkit-text-stroke: 1.2px #fff;
             color: transparent;
             font-weight: 500;
         }
         #page > h3 {
-            position: absolute;
-           
-            top: 22%;
-            font-family: gilroy;
-            font-weight: 400;
-            color: #7c7c7c;
-            left: 5%;
+            display: none;
+            
         }
         #page > h4 {
             position: absolute;
