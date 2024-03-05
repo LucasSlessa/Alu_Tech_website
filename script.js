@@ -29,6 +29,20 @@ function locomotive() {
   });
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
+
+  // Adicione um ouvinte de evento para os links que você deseja que tenham rolagem suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+
+      if (target) {
+          locoScroll.scrollTo(target);
+      }
+  });
+});
+
 }
 locomotive();
 
