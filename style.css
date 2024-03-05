@@ -130,7 +130,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #000000;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: -6px;
