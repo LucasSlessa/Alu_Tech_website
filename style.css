@@ -105,7 +105,10 @@ canvas {
     z-index: 99;
     padding: 0px 30px;
 }
+.logo{
+    width: 140px;
 
+}
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -117,6 +120,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    margin-top: 10px;
 }
 
 nav ul li a::after {
