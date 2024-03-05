@@ -14,6 +14,22 @@
     }
 }
 
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html{ 
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    background:#000000;
+}
+
+
 #preloader{
     background: #000000 url(liquid_teq64i.gif) no-repeat center center ;
     background-size: 20%;
@@ -24,27 +40,8 @@
 }
 
 
-
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: gilroy;
-}
-html{ 
-    scroll-behavior: smooth;
-    
-}
-html, body {
-    height: 100%;
-    width: 100%;
-    background:#000000;
-}
-
-
-
 #main {
-    position: absolute;
+    position: relative;
     overflow: hidden;
     color: #fff;
 }
@@ -76,7 +73,7 @@ html, body {
     background-color: #000000;
 }
 canvas {
-    position: absolute;
+    position: relative;
     z-index: 9;
     max-width: 100vw;
     max-height: 100vh;
@@ -144,7 +141,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ffffff;
+    background: #000000;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -470,7 +467,6 @@ form .btn2{
 }
 
 
-
 /* ------------------------css for small screen-------------------- */
 
 nav .fa-solid{
@@ -560,6 +556,15 @@ nav .fa-solid{
     }
 
     @media only screen and (max-width: 600px) {
+
+        #preloader{
+            background: #000000 url(liquid_teq64i.gif) no-repeat center center ;
+            background-size: 20%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+        }
         /* Esconder o ícone de menu e mostrar o menu ao clicar */
         nav .fa-solid {
             display: block;
@@ -688,7 +693,7 @@ nav .fa-solid{
         #page2 > #text2 {
             position: relative;
             top: 55%;
-            right: 2%;
+            right: 3%;
             text-align: end;
         }
         #page2 > #text2 > p {
@@ -698,7 +703,7 @@ nav .fa-solid{
         #page3 > #text3 {
             position: relative;
             top: 40%;
-            right: 15%;
+            right: 3%;
             text-align: end;
         }
         #page3 > #text3 > h3 {
