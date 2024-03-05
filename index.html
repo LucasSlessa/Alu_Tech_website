@@ -20,7 +20,7 @@
         <img src="alu1img.png" class="logo"></a>
         <ul id="sidemenu">
             <li><a href="#page">Home</a></li>
-            <li><a href="#page1">About</a></li>
+            <li><a href="#page4">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portifolio</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -90,6 +90,108 @@
                
             </div>
         </div>
+        <!-- -----------------landscape-------------------------- -->
+
+        <div class="slider" id="page4">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item active">
+                    <img src="img1.png">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Slider 01</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img2.jpg">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Slider 02</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img3.jpg">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Slider 03</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img4.jpg">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Slider 04</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img5.jpg">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Slider 05</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- button arrows -->
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- thumbnail -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="img1.png">
+                    <div class="content">
+                        Name Slider
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img2.jpg">
+                    <div class="content">
+                        Name Slider
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img3.jpg">
+                    <div class="content">
+                        Name Slider
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img4.jpg">
+                    <div class="content">
+                        Name Slider
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img5.jpg">
+                    <div class="content">
+                        Name Slider
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------services--------------------------- -->
 
         <div id="services">
             <div class="container">
@@ -284,6 +386,63 @@
 
         window.addEventListener("load", function(){
             loader.style.display = "none";
+        })
+    </script>
+
+    <script>
+
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+        // config param
+        let countItem = items.length;
+        let itemActive = 0;
+        // event next click
+        next.onclick = function(){
+            itemActive = itemActive + 1;
+            if(itemActive >= countItem){
+                itemActive = 0;
+            }
+            showSlider();
+        }
+        //event prev click
+        prev.onclick = function(){
+            itemActive = itemActive - 1;
+            if(itemActive < 0){
+                itemActive = countItem - 1;
+            }
+            showSlider();
+        }
+        // auto run slider
+        let refreshInterval = setInterval(() => {
+            next.click();
+        }, 5000)
+        function showSlider(){
+            // remove item active old
+            let itemActiveOld = document.querySelector('.slider .list .item.active');
+            let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+            itemActiveOld.classList.remove('active');
+            thumbnailActiveOld.classList.remove('active');
+
+            // active new item
+            items[itemActive].classList.add('active');
+            thumbnails[itemActive].classList.add('active');
+
+            // clear auto time run slider
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => {
+                next.click();
+            }, 5000)
+        }
+
+        // click thumbnail
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                itemActive = index;
+                showSlider();
+            })
         })
     </script>
 
