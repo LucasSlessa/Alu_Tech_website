@@ -620,7 +620,8 @@ nav .fa-solid{
         font-size: 60px;
     }
     .arrows{
-        top: 10%;
+        top: 95%;
+        
     }
         
     nav .fa-solid{
@@ -763,10 +764,10 @@ nav .fa-solid{
         canvas {
             position: static;
             top: 15%;
-            width: 80vh;
-            height: -0.1%;
-            margin:  auto 0% ;
-            padding:  90px 60px;
+            width: 100vh;
+            height: 100vh;
+            
+            padding:  90px 80px;
             
             z-index: 0;
         }
