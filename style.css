@@ -504,6 +504,12 @@ form .btn2{
         to top, #000000 10%, transparent
     );
 }
+#laststack{
+    position: relative;
+    margin-top: -40%;
+    left: 100%;
+    
+}
 .slider .list .item .content{
     position: absolute;
     left: 10%;
@@ -617,7 +623,20 @@ nav .fa-solid{
         justify-content: start;
     }
     .slider .list .item .content h2{
-        font-size: 60px;
+        font-size: 30px;
+    }
+
+    #laststack{
+        position: relative;
+        margin-top: 20%;
+        left: 10%;
+       
+        
+    }
+
+    #firststack{
+        font-size: 90%;
+
     }
     .arrows{
         top: 95%;
