@@ -546,10 +546,10 @@ form .btn2{
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
 .slider .list .item.active h2{
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 .slider .list .item.active p:nth-child(3){
-    animation-duration: 1.3s;
+    animation-duration: 1s;
 }
 .arrows{
     position: absolute;
@@ -566,7 +566,7 @@ form .btn2{
     border-radius: 5px;
     font-size: x-large;
     color: #eee;
-    transition: .5s;
+    transition: 1.5s;
 }
 .arrows button:hover{
     background-color: #eee;
@@ -592,7 +592,7 @@ form .btn2{
     width: 150px;
     height: 220px;
     filter: brightness(.5);
-    transition: .5s;
+    transition: 1.5s;
     flex-shrink: 0;
 }
 .thumbnail .item img{
