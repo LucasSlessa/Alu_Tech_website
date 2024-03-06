@@ -570,7 +570,9 @@ form .btn2{
 }
 .arrows button:hover{
     background-color: #eee;
-    color: black;
+    color: #ff004f;
+    
+    cursor: pointer;
 }
 .thumbnail{
     position: absolute;
