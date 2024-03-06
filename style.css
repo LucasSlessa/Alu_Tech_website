@@ -129,6 +129,13 @@ canvas {
     width: 140px;
 
 }
+
+#select{
+    
+    font-size: 20px;
+    color: #ff004f;
+    
+}
 nav ul li {
     display: inline-block;
     list-style: none;
