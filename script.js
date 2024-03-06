@@ -364,9 +364,6 @@ function files(index) {
      ./male0298.png
      ./male0299.png
      ./male0300.png
-
-     
-
  `;
   return data.split("\n")[index];
 }
