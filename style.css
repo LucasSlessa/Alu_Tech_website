@@ -35,14 +35,14 @@ html, body {
 
 #preloader{
     color: #fff;
-    padding-top: 20%;
+    padding-top: 10%;
     text-align: center;
     background: #000000 url(liquid_teq64i.gif) no-repeat center center ;
-    background-size: 15%;
+    background-size: 8%;
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 0;
 }
 
 
@@ -927,3 +927,48 @@ nav .fa-solid{
     
     
 }   }
+
+
+
+
+#preloader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
+    text-align: center;
+    /* position: flex; */
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#preloader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#preloader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #preloader h1{
+        font-size: 9vw;
+      
+    }
+}
